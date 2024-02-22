@@ -6,7 +6,7 @@ from bird import Bird
 class Simulation:
     def __init__(self, window_instance):
         self.window_instance = window_instance
-        self.num_birds = 20
+        self.num_birds = 100
         self.sim_birds = []
 
         self.spawn_birds()
@@ -33,4 +33,4 @@ class Simulation:
     def draw_birds(self):
         for bird in self.sim_birds:
             bird.update()
-            bird.dra()
+            bird.draw()
