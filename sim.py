@@ -6,10 +6,8 @@ from bird import Bird
 class Simulation:
     def __init__(self, window_instance):
         self.window_instance = window_instance
-        self.num_birds = 10
+        self.num_birds = 20
         self.sim_birds = []
-
-        self.draw_surface = pygame.Surface((window_instance.screen.get_width(), window_instance.screen.get_height()))
 
         self.spawn_birds()
 
@@ -34,4 +32,5 @@ class Simulation:
 
     def draw_birds(self):
         for bird in self.sim_birds:
-            self.draw_surface.blit(bird.sprite, bird.position)
+            bird.update()
+            bird.dra()
